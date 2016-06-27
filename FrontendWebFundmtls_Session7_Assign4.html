@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Mouse Cordinates</title>
+	<meta charset="utf-8">	
+	<script type="text/javascript">
+		function readMouseMove(e){
+			var today = new Date();	
+			var textAreaContent = document.getElementById("textArea");
+			textAreaContent.innerHTML = textAreaContent.innerHTML +"X:" + e.clientX + "; " + "Y:" + e.clientY+ "; " + Date() + " ";
+			textAreaContent.scrollTop = textAreaContent.scrollHeight;
+		}
+		document.onmousemove = readMouseMove;
+	</script>
+</head>
+<body>
+	<h1>Mouse Cordinates</h1>
+	<textarea id="textArea" rows="15" cols="75"></textarea>
+
+</body>
+</html>
